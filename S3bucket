@@ -1,0 +1,23 @@
+S3 Security:
+---------------
+User-based - IAM policy.
+Resource-based - Bucket policies ,Object ACL, Bucket ACL.
+Encryption - With encryption key the s3 objects are encrypted.
+
+S3 Bucket Policy :
+------------------
+- Bucket policy is based on JSON.
+- Policy contains Sid, Principle, Effect, Resources etc.
+
+{
+"Version": "2012-10-17",
+"Id": "PutObjPolicy",
+"Statement": [{
+    "Sid":"DenyObjectsThatAreNotSSEKMS",
+	"Principal": "*",
+	"Effect": "Deny",
+	"Action": "s3:PutObject",
+	"Resource": "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*",
+}]
+}
+------------------------------------------------------------------
