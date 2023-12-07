@@ -1,0 +1,32 @@
+Errors For Terraform :
+---------------
+
+│ Warning: Argument is deprecated
+│
+│   with aws_s3_bucket.dbserver5667,
+│   on s3bucket.tf line 6, in resource "aws_s3_bucket" "dbserver5667":
+│    6:         acl = "private"
+│
+│ Use the aws_s3_bucket_acl resource instead
+│
+│ (and one more similar warning elsewhere)
+
+Solution: To check the current updated resource name 
+ 
+-------------------------------------------------------------------- 
+	 
+- ec2_instance in
+╷
+│ Error: Unreadable module directory
+│
+│ Unable to evaluate directory symlink: lstat modules: no such file or directory
+╵
+
+╷
+│ Error: Unreadable module directory
+│
+│ The directory  could not be read for module "ec2_instance" at main.tf:20.
+
+Solution: Module source directory path has not correct or module is not available on particualr directory 
+
+-----------------------------------------------------------------------
